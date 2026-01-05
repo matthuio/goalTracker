@@ -1,0 +1,45 @@
+@rendermode InteractiveServer
+
+<div>
+    
+    <form @onsubmit="HandleSubmit">
+        <input type="text" @bind="formData.Title">
+        <input type="text" @bind="formData.Desc">
+        <input type="text" @bind="formData.Steps">
+        <input type="text" @bind="formData.CompleteCondition">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+@code{
+
+    public FormData formData= new();
+
+    public String TypedWord {get;set;}
+    [Parameter]
+    public EventCallback<KeyboardEventArgs> OnKeyPress {get;set;}
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        Console.WriteLine(e);
+        await OnKeyPress.InvokeAsync(e);
+    }
+    private void HandleInput(ChangeEventArgs e)
+    {
+        return;
+    }    
+
+    [Parameter]
+    public EventCallback<FormData> OnSubmit{get;set;}
+    private async Task HandleSubmit()
+    {
+        Console.WriteLine(formData.Title);
+        await OnSubmit.InvokeAsync(formData);
+        return Task.CompletedTask;
+    }
+    private class FormData{
+        public string Title{get;set;} = string.Empty;
+        public string Desc{get;set;} = string.Empty;
+        public string Steps{get;set;} = string.Empty;
+        public string CompleteCondition{get;set;} = string.Empty;
+    }
+}
