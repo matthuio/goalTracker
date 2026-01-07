@@ -2,12 +2,17 @@
 @using GoalTrackerServices
 @using goalTracker.Components.TrackerComponents
 @rendermode InteractiveServer
+@inject GoalServices GoalService
 
-<InputSection @OnSubmit="@CreateGoal"></InputSection>
+<InputSection OnSubmit="CreateGoal"></InputSection>
 
 @code {
-    public void CreateGoal()
+    public void CreateGoal(Goal goal)
     {
-        return;
+        if(goal.Title != null)
+        {
+            GoalService.CreateGoal(goal.Title,goal.Desc,goal.CompleteCondition);
+            return;
+        }
     }
 }

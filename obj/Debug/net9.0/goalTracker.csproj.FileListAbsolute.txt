@@ -190,3 +190,4 @@ C:\C_Sharp_Projects\goalTracker\bin\Debug\net9.0\runtimes\win-arm64\native\e_sql
 C:\C_Sharp_Projects\goalTracker\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\C_Sharp_Projects\goalTracker\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\goalTrac.FCEFBD21.Up2Date
+C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\goalTracker.sourcelink.json

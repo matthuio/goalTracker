@@ -1,0 +1,24 @@
+@page "/view"
+@using GoalTrackerServices
+@using goalTracker.Components.TrackerComponents
+@rendermode InteractiveServer
+@inject GoalServices GoalService
+
+<GoalDisplay Goals="Goals" onclick="HandleDelete" onsubmit="HandleUpdate"></GoalDisplay>
+
+@code {
+    public List<Goal> ?Goals{get;set;}
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Goals= await GoalService.GetGoals();
+        Console.WriteLine(Goals[0].Title);
+    }
+    private async void HandleDelete(Goal goal){
+        await GoalService.DeleteGoal(goal);
+    }
+    private async void HandleUpdate(Goal goal)
+    {
+        await GoalService.UpdateGoal(goal);
+    }
+}

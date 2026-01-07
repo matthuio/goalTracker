@@ -5,7 +5,6 @@
     <form @onsubmit="HandleSubmit">
         <input type="text" @bind="formData.Title">
         <input type="text" @bind="formData.Desc">
-        <input type="text" @bind="formData.Steps">
         <input type="text" @bind="formData.CompleteCondition">
         <button type="submit">Submit</button>
     </form>
@@ -13,7 +12,7 @@
 
 @code{
 
-    public FormData formData= new();
+    public Goal formData= new();
 
     public String TypedWord {get;set;}
     [Parameter]
@@ -29,17 +28,10 @@
     }    
 
     [Parameter]
-    public EventCallback<FormData> OnSubmit{get;set;}
+    public EventCallback<Goal> OnSubmit {get;set;}
     private async Task HandleSubmit()
     {
-        Console.WriteLine(formData.Title);
+        @* Console.WriteLine(formData.Title); *@
         await OnSubmit.InvokeAsync(formData);
-        return Task.CompletedTask;
-    }
-    private class FormData{
-        public string Title{get;set;} = string.Empty;
-        public string Desc{get;set;} = string.Empty;
-        public string Steps{get;set;} = string.Empty;
-        public string CompleteCondition{get;set;} = string.Empty;
     }
 }

@@ -23,5 +23,27 @@ namespace GoalTrackerServices
         {
             return await _db.Goals.ToListAsync();
         }
+        public async Task DeleteGoal(Goal goal)
+        {
+            _db.Goals.Remove(goal);
+            await _db.SaveChangesAsync();
+        }
+        public async Task UpdateGoal (Goal goal)
+        {
+            await _db.SaveChangesAsync();
+        }
+        public async Task<Goal> FindGoal(Goal goal)
+        {
+            var foundGoal =  await _db.Goals.FindAsync(goal);
+            if (foundGoal!= null)
+            {
+               return foundGoal;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
     }
 }

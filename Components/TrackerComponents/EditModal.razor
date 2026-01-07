@@ -1,0 +1,31 @@
+@rendermode InteractiveServer
+
+<div>
+    <input @bind="goal.Title"/>
+    <input @bind="goal.Desc"/>
+    <input @bind="goal.CompleteCondition" />
+    <input @bind="goal.Progress"/>
+    <select @bind="SelectedGoal">
+        @if(goals.Count() > 0)
+        {
+            @foreach(var goal in goals)
+            {
+                <option value="@goal">
+                        @goal.Title
+                </option>
+            }
+        }
+    </select>
+
+</div>
+
+@code{
+    [Parameter]
+    public List<Goal> goals{get;set;}
+    [Parameter]
+    public Goal goal{get;set;}
+    public Goal SelectedGoal{get;set;}
+
+
+
+}

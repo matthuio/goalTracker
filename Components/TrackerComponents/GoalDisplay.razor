@@ -1,0 +1,56 @@
+@rendermode InteractiveServer
+
+@if(Goals != null)
+{
+     @foreach(var goal in Goals)
+     {
+        <p>@goal.Title</p> <button @onclick="(e)=>HandleClick(goal)">Delete</button> <button @onclick="(e)=>OpenModal(e,goal)" >Edit</button>
+     }
+}
+@if(isOpen && goalToSend != null)
+{
+    <div>
+    <input @bind="goalToSend.Title"/>
+    <input @bind="goalToSend.Desc"/>
+    <input @bind="goalToSend.CompleteCondition" />
+    <input @bind="goalToSend.Progress"/>
+    <select @bind="SelectedGoal">
+        @if(Goals.Count() > 0)
+        {
+            @foreach(var goal in Goals)
+            {
+                <option value="@goal.Id">
+                        @goal.Title
+                </option>
+            }
+        }
+    </select>
+    <button @onclick="(e)=>HandleSubmit(goalToSend)">Complete</button>
+
+</div>
+}
+
+@code {
+    private int SelectedGoal = new();
+    private Goal goalToSend {get;set;} = null;
+    private bool isOpen {set;get;} = false;
+    [Parameter]
+    public List<Goal> ?Goals{get;set;}
+    [Parameter]
+    public EventCallback<Goal> OnClick{get;set;}
+    private async Task HandleClick(Goal goal){
+        await OnClick.InvokeAsync(goal);
+    }
+    private void OpenModal(MouseEventArgs e,Goal goal)
+    {
+        goalToSend = goal;
+        isOpen = !isOpen;
+
+    }
+    [Parameter]
+    public EventCallback<Goal> OnSubmit {get;set;}
+    private async Task HandleSubmit(Goal goal)
+    {
+        await OnSubmit.InvokeAsync(goal);
+    }
+}

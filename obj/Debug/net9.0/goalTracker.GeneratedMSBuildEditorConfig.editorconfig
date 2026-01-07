@@ -44,12 +44,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFja2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/C_Sharp_Projects/goalTracker/Components/Pages/TrackerView.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFja2VyVmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/C_Sharp_Projects/goalTracker/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/C_Sharp_Projects/goalTracker/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C_Sharp_Projects/goalTracker/Components/TrackerComponents/EditModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmFja2VyQ29tcG9uZW50c1xFZGl0TW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C_Sharp_Projects/goalTracker/Components/TrackerComponents/GoalDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmFja2VyQ29tcG9uZW50c1xHb2FsRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/C_Sharp_Projects/goalTracker/Components/TrackerComponents/InputSection.razor]
