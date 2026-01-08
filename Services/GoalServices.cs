@@ -45,5 +45,17 @@ namespace GoalTrackerServices
             }
 
         }
+        public async Task<Goal> FindGoalId(int Id)
+        {
+            var foundGoal = await _db.Goals.FirstOrDefaultAsync(g=>g.Id==Id);
+            if (foundGoal!= null)
+            {
+               return foundGoal;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

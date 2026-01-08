@@ -1,10 +1,12 @@
+@using GoalTrackerServices
 @rendermode InteractiveServer
+@inject GoalServices GoalService
 
 @if(Goals != null)
 {
      @foreach(var goal in Goals)
      {
-        <p>@goal.Title</p> <button @onclick="(e)=>HandleClick(goal)">Delete</button> <button @onclick="(e)=>OpenModal(e,goal)" >Edit</button>
+        <p>@goal.Title</p> <button @onclick="(e)=>HandleClick(goal)">Delete</button> <button @onclick="(e)=>OpenModal(e,goal)" >View</button>
      }
 }
 @if(isOpen && goalToSend != null)
@@ -23,15 +25,28 @@
                         @goal.Title
                 </option>
             }
+
         }
     </select>
+    <button @onclick="(e)=>HandleAdd(SelectedGoal)">Add</button>
     <button @onclick="(e)=>HandleSubmit(goalToSend)">Complete</button>
+    @if(StepsList.Count()> 0)
+    {
+        @foreach(var goal in StepsList)
+        {
+            <p>
+                @goal.Title
+            </p>
+        }
+    }
 
 </div>
+
 }
 
 @code {
     private int SelectedGoal = new();
+    private List<Goal> StepsList = new();
     private Goal goalToSend {get;set;} = null;
     private bool isOpen {set;get;} = false;
     [Parameter]
@@ -51,6 +66,18 @@
     public EventCallback<Goal> OnSubmit {get;set;}
     private async Task HandleSubmit(Goal goal)
     {
+        if(StepsList.Any() == true)
+        {
+            goal.Steps = StepsList;
+        }
         await OnSubmit.InvokeAsync(goal);
+    }
+    private async void HandleAdd(int goalId)
+    {
+       var goal =await GoalService.FindGoalId(goalId);
+       if (goal != null)
+       {
+        StepsList.Add(goal);
+       }
     }
 }
