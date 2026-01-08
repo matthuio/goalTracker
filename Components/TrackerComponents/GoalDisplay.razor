@@ -6,42 +6,78 @@
 {
      @foreach(var goal in Goals)
      {
-        <p>@goal.Title</p> <button @onclick="(e)=>HandleClick(goal)">Delete</button> <button @onclick="(e)=>OpenModal(e,goal)" >View</button>
+        <div class="goal-item">
+            <p>@goal.Title</p>
+            <button @onclick="(e)=>HandleClick(goal)">Delete</button>
+            <button @onclick="(e)=>OpenModal(e,goal)">View</button>
+        </div>
      }
 }
 @if(isOpen && goalToSend != null)
 {
-    <div>
-    <input @bind="goalToSend.Title"/>
-    <input @bind="goalToSend.Desc"/>
-    <input @bind="goalToSend.CompleteCondition" />
-    <input @bind="goalToSend.Progress"/>
-    <select @bind="SelectedGoal">
-        @if(Goals.Count() > 0)
+    <div class="modal-wrapper">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h3>Edit Goal</h3>
+            <button class="close-btn" @onclick="(e)=>OpenModal(e,goalToSend)">✕</button>
+        </div>
+
+        <div class="modal-section">
+            <label>Goal Details</label>
+            <input @bind="goalToSend.Title" placeholder="Goal Title"/>
+            <input @bind="goalToSend.Desc" placeholder="Description"/>
+            <input @bind="goalToSend.CompleteCondition" placeholder="Completion Condition" />
+            <input @bind="goalToSend.Progress" placeholder="Progress"/>
+        </div>
+
+        @if(goalToSend?.Steps?.Any() == true)
         {
-            @foreach(var goal in Goals)
+            <div class="modal-section">
+                <label>Associated Goals</label>
+                <div class="associated-goals">
+                    @foreach(var goal in goalToSend.Steps)
+                    {
+                        <div class="associated-goal-item">
+                            <span class="goal-name">@goal.Title</span>
+                            <span class="goal-progress">@goal.Progress%</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+
+        <div class="modal-section">
+            <label>Add Associated Goal</label>
+            <div class="add-goal-section">
+                <select @bind="SelectedGoal">
+                    @if(Goals.Count() > 0)
+                    {
+                        @foreach(var goal in Goals)
+                        {
+                            <option value="@goal.Id">@goal.Title</option>
+                        }
+                    }
+                </select>
+                <button class="add-btn" @onclick="(e)=>HandleAdd(SelectedGoal)">Add</button>
+            </div>
+            
+            @if(StepsList.Count()> 0)
             {
-                <option value="@goal.Id">
-                        @goal.Title
-                </option>
+                <div class="pending-goals">
+                    <small>Pending to add:</small>
+                    @foreach(var goal in StepsList)
+                    {
+                        <div class="pending-goal-item">@goal.Title</div>
+                    }
+                </div>
             }
+        </div>
 
-        }
-    </select>
-    <button @onclick="(e)=>HandleAdd(SelectedGoal)">Add</button>
-    <button @onclick="(e)=>HandleSubmit(goalToSend)">Complete</button>
-    @if(StepsList.Count()> 0)
-    {
-        @foreach(var goal in StepsList)
-        {
-            <p>
-                @goal.Title
-            </p>
-        }
-    }
-
-</div>
-
+        <div class="modal-actions">
+            <button class="complete-btn" @onclick="(e)=>HandleSubmit(goalToSend)">Save Changes</button>
+        </div>
+        </div>
+    </div>
 }
 
 @code {

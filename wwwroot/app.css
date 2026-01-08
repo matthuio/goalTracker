@@ -1,19 +1,28 @@
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
 }
 
 a, .btn-link {
-    color: #006bb7;
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    background-color: #3498db;
+    border-color: #2980b9;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #3498db;
 }
 
 .content {
@@ -22,6 +31,70 @@ a, .btn-link {
 
 h1:focus {
     outline: none;
+}
+
+/* Modern Input Styles */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border: 1px solid #dce4ec;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Modern Button Styles */
+button {
+    padding: 10px 20px;
+    margin: 6px 4px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #229954;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+}
+
+button:not([type="submit"]) {
+    background-color: #3498db;
+    color: white;
+}
+
+button:not([type="submit"]):hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Card-like containers */
+form,
+.goal-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
 }
 
 .valid.modified:not([type=checkbox]) {

@@ -1,0 +1,180 @@
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.goal-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.goal-item p {
+    flex: 1;
+    font-size: 16px;
+    margin: 0;
+    color: #2c3e50;
+}
+
+button {
+    margin: 0 4px;
+}
+
+.goal-item button:first-of-type {
+    background-color: #e74c3c;
+}
+
+.goal-item button:first-of-type:hover {
+    background-color: #c0392b;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    min-width: 500px;
+    max-width: 650px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 28px 16px;
+    border-bottom: 2px solid #f0f3f7;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.close-btn {
+    background: transparent;
+    color: #95a5a6;
+    font-size: 24px;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+.close-btn:hover {
+    background: #f0f3f7;
+    color: #2c3e50;
+}
+
+.modal-section {
+    padding: 24px 28px;
+    border-bottom: 1px solid #f0f3f7;
+}
+
+.modal-section:last-of-type {
+    border-bottom: none;
+}
+
+.modal-section label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.modal-section input {
+    margin: 8px 0;
+}
+
+.associated-goals {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.associated-goal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 14px 18px;
+    border-radius: 10px;
+    color: white;
+}
+
+.goal-progress {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.add-goal-section {
+    display: flex;
+    gap: 10px;
+}
+
+.add-goal-section select {
+    flex: 1;
+    margin: 0;
+}
+
+.add-btn {
+    background-color: #3498db;
+    margin: 0;
+}
+
+.add-btn:hover {
+    background-color: #2980b9;
+}
+
+.pending-goals {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed #dce4ec;
+}
+
+
+.pending-goal-item {
+    background: #fff9e6;
+    border-left: 3px solid #f39c12;
+    padding: 10px 14px;
+    margin: 6px 0;
+    border-radius: 6px;
+}
+
+
+.modal-actions {
+    padding: 20px 28px;
+    background: #f8fafb;
+    border-radius: 0 0 16px 16px;
+}
+
+.complete-btn {
+    background-color: #27ae60;
+    width: 100%;
+    padding: 14px;
+    margin: 0;
+}
+
+.complete-btn:hover {
+    background-color: #229954;
+}
+

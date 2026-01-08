@@ -20,7 +20,6 @@ C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\scopedcss\Components\Layout\Mai
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\scopedcss\bundle\goalTracker.styles.css
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\scopedcss\projectbundle\goalTracker.bundle.scp.css
-C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\15xkdardat-khy4lop6wu.gz
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\493fbx3y6z-bqjiyaj88i.gz
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\k2m9k2b6li-c2jlpeoesf.gz
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\gaviww9dxc-erw9l3u2r3.gz
@@ -65,8 +64,6 @@ C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\rf3bphjah6-notf2xhcf
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\1q0e7ih194-h1s4sie4z3.gz
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\emzes9dii1-63fj8s7r0e.gz
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\z9h12jb1l7-0j3bgjxly4.gz
-C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\e5dqsmf2in-mh1uf2qvab.gz
-C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\1pwz07i821-mh1uf2qvab.gz
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\staticwebassets.build.json
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\staticwebassets.development.json
@@ -191,3 +188,10 @@ C:\C_Sharp_Projects\goalTracker\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlit
 C:\C_Sharp_Projects\goalTracker\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\goalTrac.FCEFBD21.Up2Date
 C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\goalTracker.sourcelink.json
+C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\scopedcss\Components\Pages\Tracker.razor.rz.scp.css
+C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\scopedcss\Components\Pages\TrackerView.razor.rz.scp.css
+C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\scopedcss\Components\TrackerComponents\GoalDisplay.razor.rz.scp.css
+C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\scopedcss\Components\TrackerComponents\InputSection.razor.rz.scp.css
+C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\15xkdardat-k94k20rjvd.gz
+C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\e5dqsmf2in-kmc0v31myw.gz
+C:\C_Sharp_Projects\goalTracker\obj\Debug\net9.0\compressed\1pwz07i821-kmc0v31myw.gz

@@ -32,14 +32,6 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/C_Sharp_Projects/goalTracker/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/C_Sharp_Projects/goalTracker/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/C_Sharp_Projects/goalTracker/Components/Pages/Tracker.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFja2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,24 +40,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFja2VyVmlldy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/C_Sharp_Projects/goalTracker/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/C_Sharp_Projects/goalTracker/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/C_Sharp_Projects/goalTracker/Components/TrackerComponents/EditModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmFja2VyQ29tcG9uZW50c1xFZGl0TW9kYWwucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/C_Sharp_Projects/goalTracker/Components/TrackerComponents/GoalDisplay.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmFja2VyQ29tcG9uZW50c1xHb2FsRGlzcGxheS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/C_Sharp_Projects/goalTracker/Components/TrackerComponents/InputSection.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmFja2VyQ29tcG9uZW50c1xJbnB1dFNlY3Rpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/C_Sharp_Projects/goalTracker/Components/_Imports.razor]
@@ -79,3 +59,11 @@ build_metadata.AdditionalFiles.CssScope = b-3ruu49d2l1
 [C:/C_Sharp_Projects/goalTracker/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-hgpugc0wzi
+
+[C:/C_Sharp_Projects/goalTracker/Components/TrackerComponents/GoalDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmFja2VyQ29tcG9uZW50c1xHb2FsRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-y7se922p8w
+
+[C:/C_Sharp_Projects/goalTracker/Components/TrackerComponents/InputSection.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmFja2VyQ29tcG9uZW50c1xJbnB1dFNlY3Rpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-kxaynk7b6l

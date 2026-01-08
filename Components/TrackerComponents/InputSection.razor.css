@@ -1,0 +1,25 @@
+div {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input[type="text"] {
+    font-size: 15px;
+}
+
+input[type="text"]::placeholder {
+    color: #95a5a6;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    margin-top: 8px;
+}

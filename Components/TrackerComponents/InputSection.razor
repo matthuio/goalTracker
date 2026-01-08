@@ -3,10 +3,10 @@
 <div>
     
     <form @onsubmit="HandleSubmit">
-        <input type="text" @bind="formData.Title">
-        <input type="text" @bind="formData.Desc">
-        <input type="text" @bind="formData.CompleteCondition">
-        <button type="submit">Submit</button>
+        <input type="text" @bind="formData.Title" placeholder="Goal Title">
+        <input type="text" @bind="formData.Desc" placeholder="Description">
+        <input type="text" @bind="formData.CompleteCondition" placeholder="Completion Condition">
+        <button type="submit">Create Goal</button>
     </form>
 </div>
 
